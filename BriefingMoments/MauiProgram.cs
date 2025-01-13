@@ -13,6 +13,11 @@ namespace BriefingMoments
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("BebasNeue-Regular.ttf", "Bebas");
+                    fonts.AddFont("VisbyCF-DemiBold.otf", "Visby");
+                    fonts.AddFont("VisbyCF-ExtraBold.otf", "VisbyB");
+
+
                 });
 
 #if DEBUG

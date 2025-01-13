@@ -1,49 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BriefingMoments.MainPage">
+             x:Class="BriefingMoments.MainPage"
+             >
+    <!--<ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="Fuchsia" StatusBarStyle="LightContent" />
+    </ContentPage.Behaviors>-->
 
     <ScrollView>
-        <VerticalStackLayout>
+        <StackLayout BackgroundColor="#e0e0e0">
+            <Frame BackgroundColor="#5c0303" HeightRequest="77" CornerRadius="0" WidthRequest="400" BorderColor="Transparent" Margin="0,-1,0,0">
+                <HorizontalStackLayout HeightRequest="100" Spacing="27">
 
-            <Frame BackgroundColor="Red" HeightRequest="80" CornerRadius="0">
-                <StackLayout>
-                    
-                <Label Text="Briefing para Orçamento" TextColor="White"
-                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                       FontSize="20" FontAttributes="Bold"/>
+                    <Label Text="Briefing para Orçamento" TextColor="White" 
+                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0,0,0,0"
+                       FontSize="20" FontAttributes="Bold"
+                       FontFamily="VisbyB"/>
 
-                </StackLayout>
+                    <Image Source="logo_branco.png" HeightRequest="55" WidthRequest="90" Margin="0,0,0,3"
+                            HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                </HorizontalStackLayout>
             </Frame>
-            <!--<Image Source="logo_branco.png" Margin="0,15,0,0" HeightRequest="60" WidthRequest="150"
-       HorizontalOptions="End"/>-->
+            <HorizontalStackLayout Spacing="2" Margin="5">
 
-            <!--<Label
-                Text="Moments Eventos"
-                FontSize="25" HorizontalTextAlignment="Center" />-->
-            
+                <Image Source="user_icon.png" HeightRequest="25" WidthRequest="25"/>
+
+                <Label Text="Operador: " TextColor="#a10101" 
+                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                   FontSize="20" FontAttributes="Bold"
+                   FontFamily="VisbyB"/>
+                
+            </HorizontalStackLayout>
+
             <Button x:Name="Insert_brf"
-                    Text="Realizar Briefing"
-                    Margin="10"
-                    FontSize="20"
+                    Text="Realizar Novo Briefing"
+                    Margin="10,5,10,10"
+                    FontSize="21"
                     HeightRequest="55"
                     FontAttributes="Bold"
                     Clicked="Insert_brf_Clicked"
                     TextColor="White"
-                    BackgroundColor="Red"
+                    BackgroundColor="#a10101"
+                    FontFamily="VisbyB"
                     />
 
             <Button x:Name="Select_brf"
-                    Text="Histórico de Briefings"
                     Margin="10,0,10,10"
-                    FontSize="20"
+                    Text="Histórico de Briefing's"
+                    FontSize="21"
+                    HeightRequest="55"
                     FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#a10101"
+                    FontFamily="VisbyB"
                     Clicked="Select_brf_Clicked"
                     />
 
 
-        </VerticalStackLayout>
-        
+        </StackLayout>
+
     </ScrollView>
 
 </ContentPage>
