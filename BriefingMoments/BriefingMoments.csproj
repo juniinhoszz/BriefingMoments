@@ -60,6 +60,7 @@
 	  <None Remove="Resources\Fonts\BebasNeue-Regular.ttf" />
 	  <None Remove="Resources\Fonts\VisbyCF-DemiBold.otf" />
 	  <None Remove="Resources\Fonts\VisbyCF-ExtraBold.otf" />
+	  <None Remove="Resources\Images\history.png" />
 	  <None Remove="Resources\Images\logo_branco.png" />
 	  <None Remove="Resources\Images\user_icon.png" />
 	</ItemGroup>
@@ -72,6 +73,12 @@
 
 	<ItemGroup>
 	  <Folder Include="Model\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\NewBriefing.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

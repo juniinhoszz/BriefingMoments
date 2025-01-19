@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BriefingMoments.View.NewBriefing"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout BackgroundColor="#e0e0e0">
+
+        <Frame BackgroundColor="#5c0303" HeightRequest="70" CornerRadius="0" 
+       WidthRequest="400" BorderColor="Transparent" Margin="0,-1,0,0">
+            <Grid RowDefinitions="100*"
+                  ColumnDefinitions="80*,10*"
+                  HeightRequest="70" >
+                <Label Text="Realizar Novo Briefing" TextColor="White" 
+                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0,0,0,0"
+                       FontSize="20" FontAttributes="Bold"
+                       FontFamily="VisbyB" Grid.Column="0" Grid.Row="0"/>
+
+                <Image Source="logo_branco.png" HeightRequest="55" WidthRequest="90" Margin="0,0,0,3"
+                       HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="0"/>
+            </Grid>
+        </Frame>
+
+        <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Nome da Instituição:" TextColor="#a10101" 
+           FontSize="18" FontAttributes="Bold" Margin="05"
+           FontFamily="VisbyB"/>
+
+            <Entry x:Name="nome"
+            FontFamily="VisbyB" FontSize="18" Placeholder="Digite o nome"
+       PlaceholderColor="#5c0303" />
+
+            <Label Text="Tipo de Colégio:" TextColor="#a10101" 
+                   FontSize="18" FontAttributes="Bold" Margin="05"
+                   FontFamily="VisbyB"/>
+
+            <Picker x:Name="tipo_colegio"
+                    Title="Selecione o Tipo:"
+                    TextColor="#5c0303"
+                    TitleColor="#5c0303"/>
+
+            <Label Text="Quantidade de Turmas:" TextColor="#a10101" 
+                   FontSize="18" FontAttributes="Bold" Margin="05"
+                   FontFamily="VisbyB"/>
+
+            <Entry x:Name="qnt_turmas"
+                   FontFamily="VisbyB" FontSize="18" Placeholder="Digite a quantidade"
+                   Keyboard="Numeric" MaxLength="3" 
+                   PlaceholderColor="#5c0303" />
+
+        </VerticalStackLayout>
+        </ScrollView>
+        <Grid ColumnDefinitions="50*,50*">
+
+            <Button x:Name="back"
+            Text="Realizar Novo Briefing"
+            Margin="10,5,10,10"
+            FontSize="21"
+            HeightRequest="55"
+            FontAttributes="Bold"
+            TextColor="White"
+            BackgroundColor="#a10101"
+            FontFamily="VisbyB"
+            />
+            
+            <Button x:Name="finalizar"
+            Text="Realizar Novo Briefing"
+            Margin="10,5,10,10"
+            FontSize="21"
+            HeightRequest="55"
+            FontAttributes="Bold"
+            TextColor="White"
+            BackgroundColor="#a10101"
+            FontFamily="VisbyB"
+            />
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

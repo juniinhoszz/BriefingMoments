@@ -1,8 +1,9 @@
-﻿namespace BriefingMoments
+﻿using BriefingMoments.View;
+
+namespace BriefingMoments
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
@@ -11,7 +12,7 @@
 
         private void Insert_brf_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new NewBriefing());
         }
 
         private void Select_brf_Clicked(object sender, EventArgs e)

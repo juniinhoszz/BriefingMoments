@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BriefingMoments.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             >
+
+    <StackLayout BackgroundColor="#e0e0e0">
+        
+        <!--<Frame BackgroundColor="#5c0303" HeightRequest="70" CornerRadius="0" 
+                   WidthRequest="400" BorderColor="Transparent" Margin="0,-1,0,0">
+            <HorizontalStackLayout HeightRequest="100" Spacing="27">
+
+                <Label Text="Briefing para Orçamento" TextColor="White" 
+                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0,0,0,0"
+                       FontSize="20" FontAttributes="Bold"
+                       FontFamily="VisbyB"/>
+
+                <Image Source="logo_branco.png" HeightRequest="55" WidthRequest="90" Margin="0,0,0,3"
+                            HorizontalOptions="End" VerticalOptions="CenterAndExpand"/>
+
+            </HorizontalStackLayout>
+        </Frame>-->
+
+        <Frame BackgroundColor="#5c0303" HeightRequest="70" CornerRadius="0" 
+               WidthRequest="400" BorderColor="Transparent" Margin="0,-1,0,0">
+            <Grid RowDefinitions="100*"
+                   ColumnDefinitions="80*,10*"
+                   HeightRequest="70" >
+                <Label Text="Briefing para Orçamento" TextColor="White" 
+                HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0,0,0,0"
+                FontSize="20" FontAttributes="Bold"
+                FontFamily="VisbyB" Grid.Column="0" Grid.Row="0"/>
+
+                <Image Source="logo_branco.png" HeightRequest="55" WidthRequest="90" Margin="0,0,0,3"
+                HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="0"/>
+            </Grid>
+        </Frame>
+        
+        <HorizontalStackLayout Spacing="2" Margin="5">
+
+            <Image Source="user_icon.png" HeightRequest="25" WidthRequest="25"/>
+
+            <Label Text="Operador: " TextColor="#a10101" 
+                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                   FontSize="20" FontAttributes="Bold"
+                   FontFamily="VisbyB"/>
+
+        </HorizontalStackLayout>
+
+        <Button x:Name="Insert_brf"
+                    Text="Realizar Novo Briefing"
+                    Margin="10,5,10,10"
+                    FontSize="21"
+                    HeightRequest="55"
+                    FontAttributes="Bold"
+                    Clicked="Insert_brf_Clicked"
+                    TextColor="White"
+                    BackgroundColor="#a10101"
+                    FontFamily="VisbyB"
+                    />
+
+        <!--<Button x:Name="Select_brf"
+                    Margin="10,0,10,10"
+                    Text="Histórico de Briefing's"
+                    FontSize="21"
+                    HeightRequest="55"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="#a10101"
+                    FontFamily="VisbyB"
+                    Clicked="Select_brf_Clicked"
+                    />-->
+
+        <HorizontalStackLayout Spacing="2" Margin="5">
+
+            <Image Source="history.png" HeightRequest="23" WidthRequest="27"/>
+
+            <Label Text="Histórico de Briefing's:" TextColor="#a10101" 
+                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
+                       FontSize="20" FontAttributes="Bold"
+                       FontFamily="VisbyB"/>
+
+        </HorizontalStackLayout>
+
+
+    </StackLayout>
+</ContentPage>
