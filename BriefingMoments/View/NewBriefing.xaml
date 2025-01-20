@@ -5,8 +5,8 @@
              NavigationPage.HasNavigationBar="False">
     <StackLayout BackgroundColor="#e0e0e0">
 
-        <Frame BackgroundColor="#5c0303" HeightRequest="70" CornerRadius="0" 
-       WidthRequest="400" BorderColor="Transparent" Margin="0,-1,0,0">
+        <Frame BackgroundColor="#5c0303" HeightRequest="60" CornerRadius="0" 
+               WidthRequest="400" BorderColor="Transparent" Margin="0,-1,0,0">
             <Grid RowDefinitions="100*"
                   ColumnDefinitions="80*,10*"
                   HeightRequest="70" >
@@ -20,60 +20,147 @@
             </Grid>
         </Frame>
 
-        <ScrollView>
-        <VerticalStackLayout>
-            <Label Text="Nome da Instituição:" TextColor="#a10101" 
-           FontSize="18" FontAttributes="Bold" Margin="05"
-           FontFamily="VisbyB"/>
+        <ScrollView Orientation="Vertical">
+            <VerticalStackLayout Spacing="2">
+                <Label Text="Nome da Instituição:" TextColor="#a10101" 
+                       FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
+                       FontFamily="VisbyB"/>
 
-            <Entry x:Name="nome"
-            FontFamily="VisbyB" FontSize="18" Placeholder="Digite o nome"
-       PlaceholderColor="#5c0303" />
+                <Entry x:Name="nome"
+                       FontFamily="VisbyB" FontSize="18" Placeholder="Digite o nome"
+                       PlaceholderColor="#5c0303" BackgroundColor="white"
+                       Margin="5,0,5,0" HeightRequest="45"
+                       />
 
-            <Label Text="Tipo de Colégio:" TextColor="#a10101" 
-                   FontSize="18" FontAttributes="Bold" Margin="05"
+                <Label Text="Tipo de Colégio:" TextColor="#a10101" 
+                   FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
                    FontFamily="VisbyB"/>
 
-            <Picker x:Name="tipo_colegio"
+                <Picker x:Name="tipo_colegio"
                     Title="Selecione o Tipo:"
                     TextColor="#5c0303"
-                    TitleColor="#5c0303"/>
+                    TitleColor="#5c0303"
+                    BackgroundColor="white"
+                    Margin="5,0,05,0"/>
 
-            <Label Text="Quantidade de Turmas:" TextColor="#a10101" 
-                   FontSize="18" FontAttributes="Bold" Margin="05"
+                <Label Text="Quantidade de Turmas:" TextColor="#a10101" 
+                   FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
                    FontFamily="VisbyB"/>
 
-            <Entry x:Name="qnt_turmas"
+                <Entry x:Name="qnt_turmas"
+                   FontFamily="VisbyB" FontSize="18" Placeholder="Digite a quantidade"
+                   Keyboard="Numeric" MaxLength="2" 
+                   PlaceholderColor="#5c0303" BackgroundColor="white"
+                       Margin="5,0,5,0" HeightRequest="45"/>
+
+                <Label Text="Quantidade de Alunos(Total):" TextColor="#a10101" 
+                   FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
+                   FontFamily="VisbyB"/>
+
+                <Entry x:Name="qnt_alunos"
                    FontFamily="VisbyB" FontSize="18" Placeholder="Digite a quantidade"
                    Keyboard="Numeric" MaxLength="3" 
-                   PlaceholderColor="#5c0303" />
+                   PlaceholderColor="#5c0303" BackgroundColor="white"
+                       Margin="5,0,5,0" HeightRequest="45"/>
 
-        </VerticalStackLayout>
+                <Label Text="Valor de Repasse(R$):" TextColor="#a10101" 
+                       FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
+                       FontFamily="VisbyB"/>
+
+                <Entry x:Name="repasse"
+                       FontFamily="VisbyB" FontSize="18" Placeholder="Digite o valor(XXXX.XX)"
+                       Keyboard="Numeric" 
+                       PlaceholderColor="#5c0303" BackgroundColor="white"
+                       Margin="5,0,5,0" HeightRequest="45"/>
+
+                <Label Text="Tipo de Produção:" TextColor="#a10101" 
+                       FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
+                       FontFamily="VisbyB"/>
+
+                <Picker x:Name="tipo_producao"
+                        Title="Selecione o Tipo:"
+                        TextColor="#5c0303"
+                        TitleColor="#5c0303"
+                        BackgroundColor="white"
+                        Margin="5,0,05,0"/>
+
+                <Grid ColumnDefinitions="50*,50*"
+                      Margin="5" ColumnSpacing="5">
+                    <Frame Grid.Column="0" Grid.Row="1" HeightRequest="140">
+                        <StackLayout>
+                            <Label Text="Data Colação de Grau:" TextColor="#a10101" 
+                           FontSize="18" FontAttributes="Bold" 
+                           FontFamily="VisbyB" Grid.Column="0" HorizontalOptions="CenterAndExpand"/>
+
+                            <DatePicker Grid.Column="0" Grid.Row="1"
+                                x:Name="data_col" 
+                                Format="dd/MM/yyyy"
+                                        HorizontalOptions="CenterAndExpand"
+                                        FontSize="18"
+                                        FontFamily="VisbyB"/>
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame Grid.Column="1" Grid.Row="1" HeightRequest="140">
+                        <StackLayout>
+                            <Label Text="Data Baile de Formatura:" TextColor="#a10101" 
+                           FontSize="18" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" 
+                           FontFamily="VisbyB" />
+
+                            <DatePicker 
+                                x:Name="data_baile" 
+                                Format="dd/MM/yyyy"
+                                FontFamily="VisbyB" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+
+                <Label Text="Observações:" TextColor="#a10101" 
+                           FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
+                           FontFamily="VisbyB"/>
+
+
+                <Editor x:Name="observacoes"
+                        Placeholder="Digite suas observações aqui..."
+                        TextColor="#5c0303"
+                        PlaceholderColor="#a10101"
+                        FontFamily="VisbyB"
+                        FontSize="18"
+                        HeightRequest="120"
+                        BackgroundColor="#ffffff"
+                        Margin="5" />
+            </VerticalStackLayout>
         </ScrollView>
-        <Grid ColumnDefinitions="50*,50*">
+
+
+        <Grid ColumnDefinitions="50*,50*"
+                      VerticalOptions="EndAndExpand">
 
             <Button x:Name="back"
-            Text="Realizar Novo Briefing"
-            Margin="10,5,10,10"
-            FontSize="21"
-            HeightRequest="55"
-            FontAttributes="Bold"
-            TextColor="White"
-            BackgroundColor="#a10101"
-            FontFamily="VisbyB"
-            />
-            
+                            Text="↩ Voltar"
+                            Margin="10,5,10,10"
+                            FontSize="21"
+                            HeightRequest="55"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            BackgroundColor="#a10101"
+                            FontFamily="VisbyB"
+                            Grid.Column="0"
+                            Clicked="back_Clicked"
+                            />
+
             <Button x:Name="finalizar"
-            Text="Realizar Novo Briefing"
-            Margin="10,5,10,10"
-            FontSize="21"
-            HeightRequest="55"
-            FontAttributes="Bold"
-            TextColor="White"
-            BackgroundColor="#a10101"
-            FontFamily="VisbyB"
-            />
+                            Text="Finalizar"
+                            Margin="10,5,10,10"
+                            FontSize="21"
+                            HeightRequest="55"
+                            FontAttributes="Bold"
+                            TextColor="White"
+                            BackgroundColor="#a10101"
+                            FontFamily="VisbyB"
+                            Grid.Column="1"/>
 
         </Grid>
+
     </StackLayout>
 </ContentPage>

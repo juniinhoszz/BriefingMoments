@@ -6,4 +6,9 @@ public partial class NewBriefing : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void back_Clicked(object sender, EventArgs e)
+    {
+		Navigation.PopAsync();
+    }
 }

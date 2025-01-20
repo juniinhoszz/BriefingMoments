@@ -8,16 +8,19 @@ namespace BriefingMoments
         public MainPage()
         {
             InitializeComponent();
+
+            //operador.Text = operador: Operador.nome;
         }
 
         private void Insert_brf_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new NewBriefing());
+            
         }
 
         private void Select_brf_Clicked(object sender, EventArgs e)
         {
-
+            
         }
 
         //private void OnCounterClicked(object sender, EventArgs e)
