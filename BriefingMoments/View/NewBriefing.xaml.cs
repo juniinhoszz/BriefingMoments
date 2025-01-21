@@ -79,6 +79,7 @@ public partial class NewBriefing : ContentPage
                     Title = "Compartilhar PDF",
                     File = new ShareFile(caminho)
                 });
+                await Navigation.PopAsync();
             }
             else
             {

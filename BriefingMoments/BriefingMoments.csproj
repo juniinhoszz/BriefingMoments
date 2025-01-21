@@ -43,14 +43,23 @@
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+		<AndroidSigningKeyStore>BriefingMoments.keystore</AndroidSigningKeyStore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
 	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Juruan2208@</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>BriefingMoments-Alias</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Juruan2208@</AndroidSigningKeyPass>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
 	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <AndroidSigningStorePass>Juruan2208@</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>BriefingMoments-Alias</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>Juruan2208@</AndroidSigningKeyPass>
 	</PropertyGroup>
 
 	<ItemGroup>
