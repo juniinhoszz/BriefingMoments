@@ -37,16 +37,6 @@
             </Grid>
         </Frame>
         
-        <!--<HorizontalStackLayout Spacing="2" Margin="5">
-
-            <Image Source="user_icon.png" HeightRequest="25" WidthRequest="25"/>
-
-            <Label x:Name="operador" Text="Operador: " TextColor="#a10101" 
-                   HorizontalTextAlignment="Start" VerticalTextAlignment="Center"
-                   FontSize="20" FontAttributes="Bold"
-                   FontFamily="VisbyB"/>
-
-        </HorizontalStackLayout>-->
 
         <Button x:Name="Insert_brf"
                     Text="Realizar Novo Briefing"
@@ -72,7 +62,7 @@
                     Clicked="Select_brf_Clicked"
                     />-->
 
-        <HorizontalStackLayout Spacing="2" Margin="5">
+        <!--<HorizontalStackLayout Spacing="2" Margin="5">
 
             <Image Source="history.png" HeightRequest="23" WidthRequest="27"/>
 
@@ -81,7 +71,7 @@
                        FontSize="20" FontAttributes="Bold"
                        FontFamily="VisbyB"/>
 
-        </HorizontalStackLayout>
+        </HorizontalStackLayout>-->
 
 
     </StackLayout>

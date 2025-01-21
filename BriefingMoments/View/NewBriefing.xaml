@@ -3,45 +3,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BriefingMoments.View.NewBriefing"
              NavigationPage.HasNavigationBar="False">
-    <StackLayout BackgroundColor="#e0e0e0">
 
-        <Frame BackgroundColor="#5c0303" HeightRequest="60" CornerRadius="0" 
+    <ScrollView BackgroundColor="#e0e0e0" Orientation="Vertical">
+        <StackLayout>
+            <Frame BackgroundColor="#5c0303" HeightRequest="60" CornerRadius="0" 
                WidthRequest="400" BorderColor="Transparent" Margin="0,-1,0,0">
-            <Grid RowDefinitions="100*"
+                <Grid RowDefinitions="100*"
                   ColumnDefinitions="80*,10*"
                   HeightRequest="70" >
-                <Label Text="Realizar Novo Briefing" TextColor="White" 
+                    <Label Text="Realizar Novo Briefing" TextColor="White" 
                        HorizontalTextAlignment="Start" VerticalTextAlignment="Center" Margin="0,0,0,0"
                        FontSize="20" FontAttributes="Bold"
                        FontFamily="VisbyB" Grid.Column="0" Grid.Row="0"/>
 
-                <Image Source="logo_branco.png" HeightRequest="55" WidthRequest="90" Margin="0,0,0,3"
+                    <Image Source="logo_branco.png" HeightRequest="55" WidthRequest="90" Margin="0,0,0,3"
                        HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1" Grid.Row="0"/>
-            </Grid>
-        </Frame>
+                </Grid>
+            </Frame>
 
-        <ScrollView Orientation="Vertical">
+
             <VerticalStackLayout Spacing="2">
+
                 <Label Text="Nome da Instituição:" TextColor="#a10101" 
                        FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
                        FontFamily="VisbyB"/>
 
-                <Entry x:Name="nome"
+                <Entry x:Name="nome_inst"
                        FontFamily="VisbyB" FontSize="18" Placeholder="Digite o nome"
                        PlaceholderColor="#5c0303" BackgroundColor="white"
                        Margin="5,0,5,0" HeightRequest="45"
                        />
 
+
                 <Label Text="Tipo de Colégio:" TextColor="#a10101" 
                    FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
                    FontFamily="VisbyB"/>
 
-                <Picker x:Name="tipo_colegio"
+                <Picker x:Name="pck_tipo_colegio"
                     Title="Selecione o Tipo:"
                     TextColor="#5c0303"
                     TitleColor="#5c0303"
                     BackgroundColor="white"
-                    Margin="5,0,05,0"/>
+                    Margin="5,0,05,0"
+                    ItemDisplayBinding="{Binding Descricao}"
+                    />
+
+
 
                 <Label Text="Quantidade de Turmas:" TextColor="#a10101" 
                    FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
@@ -53,6 +60,8 @@
                    PlaceholderColor="#5c0303" BackgroundColor="white"
                        Margin="5,0,5,0" HeightRequest="45"/>
 
+
+
                 <Label Text="Quantidade de Alunos(Total):" TextColor="#a10101" 
                    FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
                    FontFamily="VisbyB"/>
@@ -62,6 +71,8 @@
                    Keyboard="Numeric" MaxLength="3" 
                    PlaceholderColor="#5c0303" BackgroundColor="white"
                        Margin="5,0,5,0" HeightRequest="45"/>
+
+
 
                 <Label Text="Valor de Repasse(R$):" TextColor="#a10101" 
                        FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
@@ -73,20 +84,26 @@
                        PlaceholderColor="#5c0303" BackgroundColor="white"
                        Margin="5,0,5,0" HeightRequest="45"/>
 
+
+
                 <Label Text="Tipo de Produção:" TextColor="#a10101" 
                        FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
                        FontFamily="VisbyB"/>
 
-                <Picker x:Name="tipo_producao"
+                <Picker x:Name="pck_tipo_producao"
                         Title="Selecione o Tipo:"
                         TextColor="#5c0303"
                         TitleColor="#5c0303"
                         BackgroundColor="white"
-                        Margin="5,0,05,0"/>
+                        Margin="5,0,05,0"
+                        ItemDisplayBinding="{Binding Descricao}"/>
+
+
 
                 <Grid ColumnDefinitions="50*,50*"
-                      Margin="5" ColumnSpacing="5">
-                    <Frame Grid.Column="0" Grid.Row="1" HeightRequest="140">
+                      Margin="5,05,05,0" ColumnSpacing="5">
+
+                    <Frame Grid.Column="0" Grid.Row="1" HeightRequest="130">
                         <StackLayout>
                             <Label Text="Data Colação de Grau:" TextColor="#a10101" 
                            FontSize="18" FontAttributes="Bold" 
@@ -99,9 +116,9 @@
                                         FontSize="18"
                                         FontFamily="VisbyB"/>
                         </StackLayout>
-
                     </Frame>
-                    <Frame Grid.Column="1" Grid.Row="1" HeightRequest="140">
+
+                    <Frame Grid.Column="1" Grid.Row="1" HeightRequest="130">
                         <StackLayout>
                             <Label Text="Data Baile de Formatura:" TextColor="#a10101" 
                            FontSize="18" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" 
@@ -113,6 +130,7 @@
                                 FontFamily="VisbyB" FontSize="18" HorizontalOptions="CenterAndExpand"/>
                         </StackLayout>
                     </Frame>
+
                 </Grid>
 
                 <Label Text="Observações:" TextColor="#a10101" 
@@ -128,17 +146,23 @@
                         FontSize="18"
                         HeightRequest="120"
                         BackgroundColor="#ffffff"
-                        Margin="5" />
-            </VerticalStackLayout>
-        </ScrollView>
+                        Margin="5,0,5,0" />
 
+                <Label Text="Nome do Operador:" TextColor="#a10101" 
+                       FontSize="18" FontAttributes="Bold" Margin="05,0,0,0"
+                       FontFamily="VisbyB"/>
 
-        <Grid ColumnDefinitions="50*,50*"
-                      VerticalOptions="EndAndExpand">
+                <Entry x:Name="operador"
+                       FontFamily="VisbyB" FontSize="18" Placeholder="Digite seu Nome"
+                       PlaceholderColor="#5c0303" BackgroundColor="white"
+                       Margin="5,0,5,0" HeightRequest="45"/>
 
-            <Button x:Name="back"
+                <Grid ColumnDefinitions="50*,50*"
+                      VerticalOptions="EndAndExpand" ColumnSpacing="7">
+
+                    <Button x:Name="back"
                             Text="↩ Voltar"
-                            Margin="10,5,10,10"
+                            Margin="5,05,0,05"
                             FontSize="21"
                             HeightRequest="55"
                             FontAttributes="Bold"
@@ -149,18 +173,22 @@
                             Clicked="back_Clicked"
                             />
 
-            <Button x:Name="finalizar"
+                    <Button x:Name="finalizar"
                             Text="Finalizar"
-                            Margin="10,5,10,10"
+                            Margin="0,5,5,5"
                             FontSize="21"
                             HeightRequest="55"
                             FontAttributes="Bold"
                             TextColor="White"
                             BackgroundColor="#a10101"
                             FontFamily="VisbyB"
-                            Grid.Column="1"/>
+                            Grid.Column="1"
+                            Clicked="finalizar_Clicked"/>
+                </Grid>
 
-        </Grid>
 
-    </StackLayout>
+            </VerticalStackLayout>
+        </StackLayout>
+    </ScrollView>
+
 </ContentPage>

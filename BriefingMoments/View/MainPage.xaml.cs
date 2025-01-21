@@ -15,7 +15,6 @@ namespace BriefingMoments
         private void Insert_brf_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new NewBriefing());
-            
         }
 
         private void Select_brf_Clicked(object sender, EventArgs e)
