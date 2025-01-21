@@ -1,13 +1,5 @@
 ﻿using Syncfusion.Pdf;
 using Syncfusion.Pdf.Graphics;
-using Syncfusion.Drawing;
-using System.Drawing;
-using System.IO;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Maui.Controls.PlatformConfiguration;
 
 namespace BriefingMoments.Model
@@ -61,10 +53,9 @@ namespace BriefingMoments.Model
             yOffset += 120;
 
             // Salva o PDF no caminho especificado
-            using (FileStream fs = new FileStream(caminho, FileMode.Create, FileAccess.Write))
-            {
-                document.Save(fs);
-            }
+            using FileStream fs = new FileStream(caminho, FileMode.Create, FileAccess.Write);
+            document.Save(fs);
         }
+
     }
 }

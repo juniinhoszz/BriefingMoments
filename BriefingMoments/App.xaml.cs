@@ -1,5 +1,5 @@
 ﻿using BriefingMoments.Model;
-using BriefingMoments.Model;
+using System.IO;
 
 namespace BriefingMoments
 {

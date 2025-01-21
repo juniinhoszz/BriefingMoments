@@ -50,11 +50,18 @@ public partial class NewBriefing : ContentPage
 
             //DisplayAlert("Valor Selecionado", $"Você escolheu: {Brf.ToString()}", "OK");
 
+            string caminho = Path.Combine(FileSystem.AppDataDirectory, $"Briefing - {nome_inst.Text}.pdf");
 
-            //string caminho = Path.Combine(FileSystem.AppDataDirectory, $"Briefing - {nome_inst.Text}.pdf");
 
-            string caminho = Path.Combine(Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDocuments).AbsolutePath, $"Briefing - {nome_inst.Text}.pdf");
-            
+            //string caminhoDownloads = GetDownloadsPath();
+
+            //string downloadsPath = MainActivity.Instance.GetDownloadsPath();
+
+
+
+            Console.WriteLine($"Caminho da pasta Downloads: {caminho}");
+
+            //string caminho = Path.Combine(Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDocuments).AbsolutePath, $"Briefing - {nome_inst.Text}.pdf");
 
 
             PDFs pdfs = new PDFs();
