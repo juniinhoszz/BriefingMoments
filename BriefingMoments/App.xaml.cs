@@ -1,4 +1,5 @@
 ﻿using BriefingMoments.Model;
+using Syncfusion.Licensing;
 using System.IO;
 
 namespace BriefingMoments
@@ -48,6 +49,7 @@ namespace BriefingMoments
         public App()
         {
             InitializeComponent();
+            SyncfusionLicenseProvider.RegisterLicense("MzY4NzQ3N0AzMjM4MmUzMDJlMzBZYzFxZmFXYlFXUU1IM250bXBCUEkwTFpJaklyaFZyRzkvbVVZRDdHNU5nPQ==");
 
             MainPage = new NavigationPage(new MainPage());
                 /*{ BarBackgroundColor = Color.FromHex("#5c0303"), /*BarTextColor = Color.w}*/ 

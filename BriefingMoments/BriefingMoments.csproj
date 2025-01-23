@@ -43,31 +43,31 @@
 		<AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
 		<GenerateTestArtifacts>True</GenerateTestArtifacts>
 		<HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
-		<AndroidSigningKeyStore>BriefingMoments.keystore</AndroidSigningKeyStore>
+		<AndroidSigningKeyStore></AndroidSigningKeyStore>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
-	  <AndroidPackageFormat>apk</AndroidPackageFormat>
-	  <AndroidKeyStore>True</AndroidKeyStore>
-	  <AndroidSigningStorePass>Juruan2208@</AndroidSigningStorePass>
-	  <AndroidSigningKeyAlias>BriefingMoments-Alias</AndroidSigningKeyAlias>
-	  <AndroidSigningKeyPass>Juruan2208@</AndroidSigningKeyPass>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+		<AndroidKeyStore>False</AndroidKeyStore>
+		<AndroidSigningStorePass></AndroidSigningStorePass>
+		<AndroidSigningKeyAlias></AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass></AndroidSigningKeyPass>
+		<DebugSymbols>False</DebugSymbols>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
-	  <AndroidPackageFormat>apk</AndroidPackageFormat>
-	  <AndroidKeyStore>True</AndroidKeyStore>
-	  <AndroidSigningStorePass>Juruan2208@</AndroidSigningStorePass>
-	  <AndroidSigningKeyAlias>BriefingMoments-Alias</AndroidSigningKeyAlias>
-	  <AndroidSigningKeyPass>Juruan2208@</AndroidSigningKeyPass>
+		<AndroidPackageFormat>apk</AndroidPackageFormat>
+		<AndroidKeyStore>False</AndroidKeyStore>
+		<AndroidSigningStorePass></AndroidSigningStorePass>
+		<AndroidSigningKeyAlias></AndroidSigningKeyAlias>
+		<AndroidSigningKeyPass></AndroidSigningKeyPass>
+		<EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -81,12 +81,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Fonts\BebasNeue-Regular.ttf" />
-	  <None Remove="Resources\Fonts\VisbyCF-DemiBold.otf" />
-	  <None Remove="Resources\Fonts\VisbyCF-ExtraBold.otf" />
-	  <None Remove="Resources\Images\history.png" />
-	  <None Remove="Resources\Images\logo_branco.png" />
-	  <None Remove="Resources\Images\user_icon.png" />
+		<None Remove="Resources\Fonts\BebasNeue-Regular.ttf" />
+		<None Remove="Resources\Fonts\VisbyCF-DemiBold.otf" />
+		<None Remove="Resources\Fonts\VisbyCF-ExtraBold.otf" />
+		<None Remove="Resources\Images\history.png" />
+		<None Remove="Resources\Images\logo_branco.png" />
+		<None Remove="Resources\Images\user_icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -97,9 +97,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="View\NewBriefing.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
+    <MauiIcon Include="Resources\AppIcon\appicon.png" />
+    <MauiSplashScreen Include="Resources\Splash\appicon.png" />
+  </ItemGroup>
+	
+	<ItemGroup>
+		<MauiXaml Update="View\NewBriefing.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 	</ItemGroup>
 
 </Project>

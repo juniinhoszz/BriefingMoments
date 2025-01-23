@@ -44,7 +44,7 @@ public partial class NewBriefing : ContentPage
                 Producao = pck_tipo_producao.SelectedItem.ToString(),
                 DataCol = data_col.Date,
                 DataBaile = data_baile.Date,
-                Obs = observacoes.Text,
+                Obs = string.IsNullOrEmpty(observacoes.Text) ? "..." : observacoes.Text,
                 NomeOperador = operador.Text,
             };
 
